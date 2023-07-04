@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Solutions</title>
+</head>
+<body style="background-color: #ccc;">
+    <div class="job-panel" style="display: flex; justify-content: center; margin: 50px 0px 0px 0px;">
+       <div class="job-card" style="height: 600px; width: 600px; background-color: white; box-shadow: 2px 4px 4px 4px rgb(184, 184, 184); border-radius: 10px;">
+            <P class="no-reply" style="text-align: center; color: red; font-weight: 600;">NO Reply For This Email</P>
+            <div class="job-cards" style="display: flex; justify-content: center;">
+                <span class="job-text" style="height: 80px; width: 500px; text-align: center; box-shadow: 4px 4px 4px 4px rgb(235, 235, 235); margin: 10px 0px 0px 0px;">
+                    <h1>JOB <b style="color: blueviolet;">SOLUTION</b></h1>
+                </span>
+            </div>
+            <div class="job-cards" style="display: flex; justify-content: center;">
+                <span class="job-texts" style="height: 60px;">
+                    <h4 style="font-size: 20px;  padding: 0px 300px 0px 0px;">Hello ${name}</h4>
+                </span>
+            </div>
+            <div class="job-cards" style="display: flex; justify-content: center;">
+                <span class="job-texts" style="height: 60px;">
+                    <p style="font-size: 18px; padding: 0px 41px 0px 150px;">${text}</p>
+                </span>
+            </div>
+            <div class="job-cards" style="display: flex; justify-content: center;">
+                <span class="job-texts" style="height: 60px;">
+                    <h6  style="font-size: 16px;  padding: 0px 300px 0px 0px;">Username : ${username} </h6>
+                </span>
+            </div>
+            <div class="job-cards" style="display: flex; justify-content: center;">
+                <span class="job-texts" style="height: 60px;">
+                    <h5  style="font-size: 20px;  padding: 30px 430px 0px 0px;">Thanks</h5>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+image: maven:3.6.3
+
+pipelines:
+  default:
+    - step:
+            name: Build and Test
+            caches:
+              - maven
+            script:
+              - mvn clean compile package
+            artifacts:
+              - '/opt/atlassian/pipelines/agent/build/target/jobportal-0.0.1-SNAPSHOT.war'
+              
+    - step:
+        name: Generate and deploy war
+        deployment: Production
+        script:
+             - pipe: atlassian/ftp-deploy:0.4.1
+               variables:
+                 USER: $FTP_USERNAME
+                 PASSWORD: $FTP_PASSWORD
+                 SERVER: $FTP_HOST
+                 REMOTE_PATH: '/opt/tomcat/webapps/'
+                 FILENAME: 'jobportal-0.0.1-SNAPSHOT.war'
+                 #LOCAL_PATH: '/opt/atlassian/pipelines/agent/build/target/jobportal-0.0.1-SNAPSHOT.war'
+                 #DEBUG: 'true'
